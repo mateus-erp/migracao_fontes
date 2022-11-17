@@ -7,10 +7,11 @@ Esta documentação contêm os erros e como corrigi-los por categoria.
 Exemplo:
 ```
 dbSelectArea("SX3")
-SX3->(DbSetOrder(1))
+SX3->(dbSetOrder(1))
 While SX3->X3_ARQUIVO == 'SN1'
     ...
 EndDo
+SX3->(dbCloseArea())
 ```
 
 Como corrigir a violação:
