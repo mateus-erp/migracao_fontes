@@ -230,7 +230,7 @@ SX5->(dbCloseArea())
 
 Como corrigir a violação:
 ```
-FwPutSX5(/*cFlavour*/, "00", "16", "TABELAS DE OCORRENCIAS ATIVO", "TABLA DE EVENTOS DEL ACTIVO", "OCCURRENCES TABLE - ASSETS")
+FwPutSX5(/*cFlavour*/, "01", "CTR011", "TABELAS DE OCORRENCIAS ATIVO", "TABLA DE EVENTOS DEL ACTIVO", "OCCURRENCES TABLE - ASSETS")
 ```
 
 ### SX9 - Uso NÃO PERMITIDO de leitura do metadados
