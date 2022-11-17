@@ -235,4 +235,4 @@ FwPutSX5(/*cFlavour*/, "00", "16", "TABELAS DE OCORRENCIAS ATIVO", "TABLA DE EVE
 Em análise
 
 ### Erro de compilação
-Deve ser realizado a analise se a include foi disponibilizada no code analysis ou se a mesma está com problema de sintaxe.
+Deve ser realizado a analise se a include foi disponibilizada no code analysis ou se a mesma está com problema de sintaxe. Em caso de sintaxe, deve ser removida do projeto.
