@@ -220,7 +220,7 @@ dbSelectArea("SX5")
 SX5->(dbSetOrder(1))
 If dbSeek(xFilial("SX5")+"01"+"CTR011")
     RecLock("SX5",.F.)
-        SX5->X5_DESCRI := "Valor"
+        SX5->X5_DESCRI := "TABELAS DE OCORRENCIAS ATIVO"
     SX5->(MsunLock())
 EndIf
 SX5->(dbCloseArea())
