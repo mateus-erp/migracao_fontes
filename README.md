@@ -176,6 +176,7 @@ dbSelectArea("SX2")
 dbSeek("SB1")	
 While SX2->X2_CHAVE == "SB1"
     cUnico := SX2->X2_UNICO
+    SX2->(dbSkip())
 EndDo
 SX2->(dbCloseArea())
 ```
