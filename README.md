@@ -20,7 +20,7 @@ Local aCampos := FWSX3Util():GetAllFields("SN1", .T.)
 Local nCount  := 1
 
 For nCount := 1 To Len(aCampos)
-    ...
+    GetSx3Cache(aCampos[nCount], "X3_TAMANHO")
 Next
 ```
 
