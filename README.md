@@ -20,7 +20,7 @@ SX3->(dbCloseArea())
 
 Como corrigir a violação:
 ```
-Local aCampos := FWSX3Util():GetAllFields("ZZM", .T.)
+Local aCampos := FWSX3Util():GetAllFields("ZZM", .T. /* Se .T. trás os campos virtuais */)
 Local nCount  := 1
 Local aHeader := {}
 
