@@ -188,7 +188,7 @@ Local aReturn := FwSX2Util():GetSX2data('SB1', {"X2_UNICO", "X2_ARQUIVO"})
 Local nCount  := 1
 
 For nCount := 1 To Len(aReturn)
-    aReturn[nCount][2]--> Campo da SX2
+    aReturn[nCount][1]--> Campo da SX2
     aReturn[nCount][2]--> Conteúdo do campo
 Next 
 ```
