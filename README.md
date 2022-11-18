@@ -13,7 +13,7 @@ SX3->(dbSetOrder(1))
 DbSeek('ZZM')
 While !EOF() .AND. X3_ARQUIVO == "ZZM"
     aAdd(aHeader,{TRIM(X3_TITULO),X3_CAMPO,X3_PICTURE,X3_TAMANHO,X3_DECIMAL,X3_VALID,X3_USADO,X3_TIPO,X3_ARQUIVO,X3_CONTEXT})
-    DbSkip()
+    SX3->(dbSkip())
 EndDo
 SX3->(dbCloseArea())
 ```
