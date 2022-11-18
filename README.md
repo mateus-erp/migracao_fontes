@@ -159,7 +159,7 @@ Local nCount    := 1
 oObj:AddGroup("ATA010")
 oObj:SearchGroup()
 
-aPergunte := oObj:GetGroup("ACA480")
+aPergunte := oObj:GetGroup("ATA010")
 For nCount := 1 To Len(aPergunte)
     ...
 Next
