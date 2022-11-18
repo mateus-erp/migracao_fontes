@@ -6,22 +6,36 @@ Esta documentação contêm os erros e como corrigi-los por categoria.
 ### SX3 - Uso NÃO PERMITIDO de leitura do metadados
 Exemplo:
 ```
-dbSelectArea("SX3")
+Local aHeader := {}
+
+dbSelectArea('SX3')
 SX3->(dbSetOrder(1))
-While SX3->X3_ARQUIVO == 'SN1'
-    ...
+DbSeek('ZZM')
+While !EOF() .AND. X3_ARQUIVO == "ZZM"
+    aAdd(aHeader,{TRIM(X3_TITULO),X3_CAMPO,X3_PICTURE,X3_TAMANHO,X3_DECIMAL,X3_VALID,X3_USADO,X3_TIPO,X3_ARQUIVO,X3_CONTEXT})
+    DbSkip()
 EndDo
 SX3->(dbCloseArea())
 ```
 
 Como corrigir a violação:
 ```
-Local aCampos := FWSX3Util():GetAllFields("SN1", .T.)
+Local aCampos := FWSX3Util():GetAllFields("ZZM", .T.)
 Local nCount  := 1
+Local aHeader := {}
 
 For nCount := 1 To Len(aCampos)
-    GetSx3Cache(aCampos[nCount], "X3_TAMANHO")
-Next
+    aAdd(aHeader, { GetSx3Cache(aCampos[nCount], "X3_TITULO"),; 
+                    GetSx3Cache(aCampos[nCount], "X3_CAMPO"),;
+                    GetSx3Cache(aCampos[nCount], "X3_PICTURE"),; 
+                    GetSx3Cache(aCampos[nCount], "X3_TAMANHO"),;
+                    GetSx3Cache(aCampos[nCount], "X3_DECIMAL"),;
+                    GetSx3Cache(aCampos[nCount], "X3_VALID"),;
+                    GetSx3Cache(aCampos[nCount], "X3_USADO"),;
+                    GetSx3Cache(aCampos[nCount], "X3_TIPO"),;
+                    GetSx3Cache(aCampos[nCount], "X3_ARQUIVO"),;
+                    GetSx3Cache(aCampos[nCount], "X3_CONTEXT")})
+Next 
 ```
 
 ### Chamada descontinuada de Driver ISAM
